@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LandingPage</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Guilherme Gouvea">
+	<meta name="description" content="Descrição do Site">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+	<meta name="keywords" content="palavra-chave,palavra-chave,palavra-chave,palavra-chave">
+	<script src="https://kit.fontawesome.com/358f7b4005.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<div class="center">
+				<div class="menu">
+					<div class="logo"><a href="index.html">LOGOMARCA</a></div><!--logo-->
+					<nav class="menu-desktop">
+						<ul>
+							<li class="selected"><a href="index.html">Home</a></li>
+							<li><a href="#">Galeria</a></li>
+							<li><a href="#">Contato</a></li>
+						</ul>
+					</nav><!--menu-desktop-->
+				
+
+					<nav class="menu-mobile">
+						<h2><i class="fas fa-bars"></i></h2>
+						<ul>
+							<li class="selected first"><a href="index.html">Home</a></li>
+							<li><a href="#">Galeria</a></li>
+							<li><a href="#">Contato</a></li>
+						</ul>
+					</nav><!--menu-mobile-->
+				</div><!--menu-->	
+			</div><!--center-->
+			<div class="clear"></div><!--clear-->
+	</header>
+
+	<section>
+		<div class="banner">
+			
+		</div><!--banner-->	
+	</section>
+
+	<section class="mid">
+		<div class="center">
+			<div class="galeria">
+				<div class="box"><img src="images/1.jpg" title="flores" alt="flores" onclick='clique("images/1.jpg")'></div>
+			</div><!--galeria-->
+			<div class="galeria">
+				<div class="box"><img src="images/2.jpg" title="flores" alt="flores" onclick='clique("images/2.jpg")'></div>
+			</div><!--galeria-->
+			<div class="galeria">
+				<div class="box"><img src="images/3.jpg" title="flores" alt="flores" onclick='clique("images/3.jpg")'></div>
+			</div><!--galeria-->
+			<div class="galeria">
+				<div class="box"><img src="images/4.jpg" title="flores" alt="flores" onclick='clique("images/4.jpg")'></div>
+			</div><!--galeria-->
+			<div class="galeria">
+				<div class="box"><img src="images/5.jpg" title="flores" alt="flores" onclick='clique("images/5.jpg")'></div>
+			</div><!--galeria-->
+			<div class="galeria">
+				<div class="box"><img src="images/6.jpg" title="flores" alt="flores" onclick='clique("images/6.jpg")'></div>
+			</div><!--galeria-->
+			<div class="clear"></div>
+		</div><!--center-->
+
+		<div id="janela-modal">
+			<span id="close">X</span>
+			<img id="img-modal">
+		</div><!--janela-modal-->
+	</section><!--mid-->
+
+	<footer>
+		<div class="center">
+			<div class="dados-bot">
+				<div class="contato">
+					<h2>Contato</h2>
+					<p><i class="fas fa-envelope"></i></i> exemplo@email.com</p>
+					<p><i class="fas fa-phone"></i> (DDD) 99999-9999</p>
+				</div><!--contato-->	
+				
+				<div class="social-media">
+					<h2>Siga-nos nas Redes Sociais!</h2>
+					<a href="http://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+					<a href="http://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+				</div><!--social-media-->			
+			</div>
+		</div><!--center-->	
+		<div class="clear"></div><!--clear-->
+		<p class="direitos">© Todos os direitos reservados!</p>	
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script>
+			$('nav.menu-mobile h2').click(function(){
+				$('nav.menu-mobile ul').slideToggle();
+			});
+		</script>
+
+		<script>
+			function clique(img){
+				var modalJ=document.getElementById("janela-modal");
+				var modalI=document.getElementById("img-modal");
+				var modalB=document.getElementById("close");
+
+				modalJ.style.display="block";
+				modalI.src=img;
+				modalB.onclick=function(){
+					modalJ.style.display="none";
+				}
+			}
+		</script>
+
+</body>
+</html>
